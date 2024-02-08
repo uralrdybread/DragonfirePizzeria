@@ -20,11 +20,9 @@
         <div class="content">
             <img src="/img/dfplogo.png" alt="pizza house logo">
             <div class="title m-b-md">
-                
-                Savor The Blaze, Taste The Amaze
             </div>
             <p class='mssg'>{{ session('mssg')}} </p>
-            <a href="{{ route('pizzas.create') }}">Order a Pizza</a>
+            <a href="{{ route('landing') }}">Embark on a Flaming Flavor Journey, Right from Your Screen!</a>
         </div>
     </div>
 @endsection

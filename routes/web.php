@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PizzaController;
 
 /*
@@ -19,6 +20,11 @@ Route::get('/', function () {
 });
 
 Route::get('pizzas', [PizzaController::class, 'index'])->name('pizzas.index')->middleware('auth');
+Route::get('landing', [HomeController::class, 'landing'])->name('landing');
+Route::get('menu', [HomeController::class, 'menu'])->name('menu');
+Route::get('aboutus', [HomeController::class, 'aboutus'])->name('aboutus');
+Route::get('events', [HomeController::class, 'events'])->name('events');
+Route::get('merch', [HomeController::class, 'merch'])->name('merch');
 
 //Keep the wildcard get below the create route 
 Route::get('orders/pizzas/create', [PizzaController::class, 'create'])->name('pizzas.create');
@@ -29,7 +35,7 @@ Route::delete('/pizzas/{id}', [PizzaController::class, 'destroy'])->name('pizzas
 
 //Make register false to turn off registration and remove to turn it back on
 Auth::routes([
-    'register' => false
+    // 'register' => false
 ]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

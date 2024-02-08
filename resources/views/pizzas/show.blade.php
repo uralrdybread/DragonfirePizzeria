@@ -3,8 +3,9 @@
 @section('content')
 
     <div class="wrapper pizza-details">
-
+{{-- Keeping in the type, base and toppings class in case I want to customize later --}}
         <h1>Order for {{ $pizza->name }}</h1>
+        <h1>Phone {{ $pizza->phonenumber }}</h1>
         <p class="type"> Type - {{ $pizza->type }}</p>
         <p class="base"> Base - {{ $pizza->base }}</p>
         <p class="toppings"> Extra Toppings </p>
